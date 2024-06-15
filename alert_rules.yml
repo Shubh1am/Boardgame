@@ -27,10 +27,8 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: High CPU utilization on host {{ $labels.instance
-          }}
-      description: The CPU utilization on host {{
-          $labels.instance }} has exceeded 80% for 5 minutes.
+      summary: High CPU utilization on host {{ $labels.instance}}
+      description: The CPU utilization on host {{$labels.instance }} has exceeded 80% for 5 minutes.
 
 
   - alert: LowDiskSpace
@@ -39,10 +37,8 @@ groups:
     labels:
       severity: critical
     annotations:
-      summary: Low disk space on host {{ $labels.instance
-      }}
-      description: The free disk space on host {{
-      $labels.instance }} has dropped below 1G
+      summary: Low disk space on host {{ $labels.instance}}
+      description: The free disk space on host {{      $labels.instance }} has dropped below 1G
 
 
   - alert: HighRequestErrorRate
@@ -78,10 +74,8 @@ groups:
     labels:
       severity: warning
     annotations:
-      summary: High memory utilization on host {{
-          $labels.instance }}
-      description: The memory utilization on host {{
-          $labels.instance }} has exceeded 80% for 5 minutes.
+      summary: High memory utilization on host {{          $labels.instance }}
+      description: The memory utilization on host {{          $labels.instance }} has exceeded 80% for 5 minutes.
 
 
 
@@ -92,7 +86,5 @@ groups:
     labels:
       severity: warning
     annotations:
-      summary: High network traffic on host {{
-          $labels.instance }}
-      description: The inbound network traffic on host {{
-          $labels.instance }} has exceeded 100 MB/s for 5 minutes.
+      summary: High network traffic on host {{          $labels.instance }}
+      description: The inbound network traffic on host {{          $labels.instance }} has exceeded 100 MB/s for 5 minutes.

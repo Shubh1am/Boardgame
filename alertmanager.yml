@@ -7,16 +7,16 @@ route:
 receivers:
   - name: 'email-notifications' # Receiver name
     email_configs:
-  - to: shubhammutkalwar@gmail.com # Email recipient
-    from: test@gmail.com # Email sender
-    smarthost: smtp.gmail.com:587 # SMTP server
-    auth_username: shubhammutkalwar@gmail.com # SMTP auth username
-    auth_identity: shubhammutkalwar#gmail.com # SMTP auth identity
-    auth_password: "saved in doc" # SMTP auth password
-    send_resolved: true # Send notifications for resolved alerts Inhibition Rules
+      - to: shubhammutkalwar@gmail.com # Email recipient
+        from: test@gmail.com # Email sender
+        smarthost: smtp.gmail.com:587 # SMTP server
+        auth_username: shubhammutkalwar@gmail.com # SMTP auth username
+        auth_identity: shubhammutkalwar#gmail.com # SMTP auth identity
+        auth_password: "saved in doc" # SMTP auth password
+        send_resolved: true # Send notifications for resolved alerts Inhibition Rules
 inhibit_rules:
   - source_match:
-    severity: 'critical' # Source alert severity
+      severity: 'critical' # Source alert severity
     target_match:
       severity: 'warning' # Target alert severity
     equal: ['alertname', 'dev', 'instance'] # Fields to match
